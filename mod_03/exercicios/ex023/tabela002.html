@@ -12,18 +12,36 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         td, th {
             border: 1px solid black;
             padding: 10px;
         }
+
         
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+            tbody > tr:nth-child(2n) {
+                background-color: lightgrey;
+            }
         td.num {
             text-align: right;
         }
@@ -36,10 +54,10 @@
     </h1>
 
     <table>
-
+        <caption>População das Unidades Federativas</caption>
         <thead>
-            <th>Estado</th>
-            <th>População</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px;" >População</th>
         </thead>
 
         <tbody>
@@ -154,7 +172,7 @@
         </tbody>
 
         <tfoot>
-            <th>Total de habitantes</th>
+            <th scope="row">Total de habitantes</th>
             <td class="num"><strong>212 583 750</strong></td>
         </tfoot>
     </table>
