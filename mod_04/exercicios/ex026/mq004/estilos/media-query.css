@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */ 
+
+/* Typical Device Breakpoints
+---------------2025-------------
+Até 480px → Celulares pequenos
+
+481px a 768px → Celulares médios e grandes
+
+769px a 1024px → Tablets
+
+1025px a 1280px → Laptops
+
+1281px ou mais → Desktops e telas grandes
+
+
+Porém para este exercício vou usar as medidas dadas em aula (aula 08 do cap.25 do módulo 04)*/
+
+
+/* Não vamos fazer para celulares pq o index já é feito no modelo Mobile First, portanto agora é só fazer para outros tipos de dispositivos */
+
+/* Impressão */
+@media print {
+    
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    body {
+        background-image: url(../imagens/back-print.jpg);
+     /* desnecessário a imagem pois no papel background-image não fica legal, por isso vamos fazer as configurações a seguir e tb a anterior */
+    }
+        
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita através do site www.cursoemvideo.com';
+        text-decoration: overline;
+    }
+    
+    main h1 {    
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: block; }
+    img#pc { display: none; }
+    img#tv { display: none; }  
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: block; }
+    img#pc { display: none; }
+    img#print { display: none; }
+    img#tv { display: none; }
+}
+
+/* Laptops */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: block; }
+    img#tv { display: none; }
+}
+
+/* Telas grandes */
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 700px;
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: block; }   
+}
+
