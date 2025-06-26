@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folha de Estudos - Unidades CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eaeaea;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 Folha de Estudos – Unidades em CSS</h1>
+
+  <section>
+    <h2>🔹 1. Unidades Absolutas</h2>
+    <p>Essas unidades têm um tamanho fixo, que não muda com a tela.</p>
+    <table>
+      <tr><th>Unidade</th><th>Descrição</th><th>Exemplo</th></tr>
+      <tr><td><code>px</code></td><td>Pixel – unidade mais comum e fixa</td><td><code>width: 300px;</code></td></tr>
+      <tr><td><code>cm</code>, <code>mm</code>, <code>in</code></td><td>Centímetros, milímetros e polegadas. Mais usadas em impressão.</td><td><code>width: 5cm;</code></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 2. Unidades Relativas</h2>
+    <p>Adaptam-se ao tamanho do elemento pai ou da tela.</p>
+    <table>
+      <tr><th>Unidade</th><th>Relativa a</th><th>Descrição</th><th>Exemplo</th></tr>
+      <tr><td><code>em</code></td><td>Fonte do elemento pai</td><td>Escala conforme o contexto. Pode se multiplicar.</td><td><code>font-size: 1.2em;</code></td></tr>
+      <tr><td><code>rem</code></td><td>Fonte da tag <code>html</code></td><td>Mais previsível. Útil para fontes e espaçamentos.</td><td><code>margin: 2rem;</code></td></tr>
+      <tr><td><code>%</code></td><td>Elemento pai</td><td>Útil para layouts flexíveis e adaptáveis.</td><td><code>width: 80%;</code></td></tr>
+      <tr><td><code>vh</code></td><td>Altura da viewport</td><td><code>1vh = 1% da altura visível</code></td><td><code>height: 100vh;</code></td></tr>
+      <tr><td><code>vw</code></td><td>Largura da viewport</td><td><code>1vw = 1% da largura visível</code></td><td><code>width: 50vw;</code></td></tr>
+      <tr><td><code>vmin</code></td><td>Menor entre <code>vh</code> e <code>vw</code></td><td>Escala proporcional. Útil em responsividade.</td><td><code>font-size: 3vmin;</code></td></tr>
+      <tr><td><code>vmax</code></td><td>Maior entre <code>vh</code> e <code>vw</code></td><td>Menos comum, mas útil em elementos expansivos.</td><td><code>width: 90vmax;</code></td></tr>
+      <tr><td><code>ch</code></td><td>Caractere “0”</td><td>Boa para larguras de campos de texto e legibilidade.</td><td><code>width: 40ch;</code></td></tr>
+      <tr><td><code>ex</code></td><td>Altura da letra “x”</td><td>Raramente usada. Medida tipográfica.</td><td><code>line-height: 1ex;</code></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>📊 3. Quando Usar Cada Unidade</h2>
+    <table>
+      <tr>
+        <th>Situação</th>
+        <th>Unidade Ideal</th>
+        <th>Motivo</th>
+      </tr>
+      <tr>
+        <td>Layout fixo e previsível</td>
+        <td><code>px</code></td>
+        <td>Precisão no controle do tamanho</td>
+      </tr>
+      <tr>
+        <td>Fontes escaláveis</td>
+        <td><code>rem</code> ou <code>em</code></td>
+        <td>Permite acessibilidade e responsividade</td>
+      </tr>
+      <tr>
+        <td>Seções de tela cheia</td>
+        <td><code>vh</code>, <code>vw</code></td>
+        <td>Preenche toda a viewport</td>
+      </tr>
+      <tr>
+        <td>Layouts responsivos</td>
+        <td><code>%</code>, <code>vw</code>, <code>vh</code></td>
+        <td>Adapta ao tamanho do dispositivo</td>
+      </tr>
+      <tr>
+        <td>Campos de texto alinhados</td>
+        <td><code>ch</code></td>
+        <td>Alinha com base no comprimento dos caracteres</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🧠 Dicas Rápidas</h2>
+    <ul>
+      <li><strong><code>rem</code></strong> é preferível a <code>em</code> para fontes e espaçamentos, pois é mais previsível.</li>
+      <li>Evite misturar muitas unidades diferentes em um mesmo componente.</li>
+      <li>Use <code>vh</code>/<code>vw</code> com cuidado em mobile, pois barras do navegador podem alterar a altura visível.</li>
+      <li>Combine unidades: <code>max-width: 90vw; padding: 2rem;</code> para layout limpo e adaptável.</li>
+    </ul>
+  </section>
+
+</body>
+</html>

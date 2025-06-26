@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folha de Estudos - Propriedades CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      padding: 2rem;
+      max-width: 950px;
+      margin: auto;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eaeaea;
+    }
+
+    pre {
+      background: #f7f7f7;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 4px solid #ccc;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 Folha de Estudos – Propriedades CSS Comuns</h1>
+
+  <section>
+    <h2>🔹 Box Model (Modelo de Caixa)</h2>
+    <p>Todo elemento HTML é uma caixa com:</p>
+    <ul>
+      <li><strong>margin</strong> – Espaço externo</li>
+      <li><strong>border</strong> – Borda</li>
+      <li><strong>padding</strong> – Espaço interno</li>
+      <li><strong>content</strong> – O conteúdo em si</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🔹 Margem e Espaçamento</h2>
+    <table>
+      <tr><th>Propriedade</th><th>Descrição</th></tr>
+      <tr><td><code>margin</code></td><td>Espaço externo (pode usar valores individuais: top, right, bottom, left)</td></tr>
+      <tr><td><code>padding</code></td><td>Espaço interno (mesma lógica)</td></tr>
+      <tr><td><code>gap</code></td><td>Espaço entre elementos (em Flexbox e Grid)</td></tr>
+    </table>
+    <pre><code>margin: 20px 10px 5px 0;
+/* top | right | bottom | left */</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 Largura e Altura</h2>
+    <pre><code>width: 100%;
+height: 200px;
+max-width: 1200px;
+min-height: 300px;</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 Bordas e Arredondamento</h2>
+    <pre><code>border: 1px solid #333;
+border-radius: 8px;</code></pre>
+    <p><code>border-radius</code> permite cantos arredondados.</p>
+  </section>
+
+  <section>
+    <h2>🔹 Cor e Fundo</h2>
+    <pre><code>color: #333;
+background-color: #f9f9f9;
+background-image: url("fundo.jpg");
+background-size: cover;</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 Tipografia</h2>
+    <pre><code>font-size: 16px;
+font-family: Arial, sans-serif;
+font-weight: bold;
+line-height: 1.5;
+text-align: center;
+text-transform: uppercase;</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 Display e Visibilidade</h2>
+    <table>
+      <tr><th>Valor</th><th>Descrição</th></tr>
+      <tr><td><code>block</code></td><td>O elemento ocupa uma linha inteira</td></tr>
+      <tr><td><code>inline</code></td><td>Fica na mesma linha que outros</td></tr>
+      <tr><td><code>inline-block</code></td><td>Como inline, mas permite altura/largura</td></tr>
+      <tr><td><code>none</code></td><td>Oculta o elemento</td></tr>
+      <tr><td><code>flex</code></td><td>Inicia Flexbox</td></tr>
+      <tr><td><code>grid</code></td><td>Inicia Grid</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 Posicionamento</h2>
+    <table>
+      <tr><th>Valor</th><th>Descrição</th></tr>
+      <tr><td><code>static</code></td><td>Posição padrão</td></tr>
+      <tr><td><code>relative</code></td><td>Relativo à posição original</td></tr>
+      <tr><td><code>absolute</code></td><td>Relativo ao primeiro pai com <code>position</code></td></tr>
+      <tr><td><code>fixed</code></td><td>Fixado na tela</td></tr>
+      <tr><td><code>sticky</code></td><td>Fica preso após scroll</td></tr>
+    </table>
+    <pre><code>position: absolute;
+top: 10px;
+left: 0;</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 Outros úteis</h2>
+    <ul>
+      <li><code>box-shadow</code> – sombra externa</li>
+      <li><code>opacity</code> – opacidade do elemento</li>
+      <li><code>z-index</code> – profundidade (pilha de camadas)</li>
+      <li><code>overflow</code> – rolagem ou esconder conteúdo excedente</li>
+    </ul>
+    <pre><code>box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+opacity: 0.8;
+overflow: hidden;</code></pre>
+  </section>
+
+  <section>
+    <h2>🧠 Dicas Rápidas</h2>
+    <ul>
+      <li>Use <code>* { box-sizing: border-box; }</code> no início do CSS para facilitar controle do tamanho total.</li>
+      <li>Combine <code>padding</code> + <code>margin</code> corretamente para espaçamentos consistentes.</li>
+      <li>Use <code>rem</code> para tamanhos de fonte consistentes.</li>
+    </ul>
+  </section>
+
+</body>
+</html>

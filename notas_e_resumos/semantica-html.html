@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folha de Estudos - HTML Semântico</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      padding: 2rem;
+      max-width: 950px;
+      margin: auto;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eaeaea;
+    }
+
+    pre {
+      background: #f7f7f7;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 4px solid #ccc;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 Folha de Estudos – HTML Semântico</h1>
+
+  <section>
+    <h2>🔹 O que é HTML semântico?</h2>
+    <p>É o uso de tags que descrevem claramente o conteúdo da página, facilitando a leitura por humanos, navegadores e mecanismos de busca.</p>
+  </section>
+
+  <section>
+    <h2>🔹 Principais Elementos Semânticos</h2>
+    <table>
+      <tr><th>Elemento</th><th>Uso</th></tr>
+      <tr><td><code>&lt;main&gt;</code></td><td>Conteúdo principal da página</td></tr>
+      <tr><td><code>&lt;header&gt;</code></td><td>Cabeçalho da página ou seção</td></tr>
+      <tr><td><code>&lt;footer&gt;</code></td><td>Rodapé da página ou seção</td></tr>
+      <tr><td><code>&lt;nav&gt;</code></td><td>Área de navegação</td></tr>
+      <tr><td><code>&lt;section&gt;</code></td><td>Bloco de conteúdo relacionado</td></tr>
+      <tr><td><code>&lt;article&gt;</code></td><td>Conteúdo independente e reutilizável</td></tr>
+      <tr><td><code>&lt;aside&gt;</code></td><td>Conteúdo secundário/lateral</td></tr>
+      <tr><td><code>&lt;figure&gt;</code></td><td>Imagem com legenda</td></tr>
+      <tr><td><code>&lt;figcaption&gt;</code></td><td>Legenda da imagem</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 Exemplo Completo</h2>
+    <pre><code>&lt;main&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Meu Site&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;a href="#"&gt;Início&lt;/a&gt;
+      &lt;a href="#"&gt;Sobre&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;section&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Postagem 1&lt;/h2&gt;
+      &lt;p&gt;Texto do artigo...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;aside&gt;
+    &lt;p&gt;Links extras ou anúncios&lt;/p&gt;
+  &lt;/aside&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;Rodapé do site&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/main&gt;
+</code></pre>
+  </section>
+
+</body>
+</html>

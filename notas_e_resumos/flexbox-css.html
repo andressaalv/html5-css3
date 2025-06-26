@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folha de Estudos - Flexbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      padding: 2rem;
+      max-width: 950px;
+      margin: auto;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    code {
+      background: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eaeaea;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+    }
+
+    pre {
+      background: #f7f7f7;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 4px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 Folha de Estudos – CSS Flexbox</h1>
+
+  <section>
+    <h2>🔹 O que é Flexbox?</h2>
+    <p>O Flexbox (caixa flexível) é um modelo de layout unidimensional do CSS que organiza elementos <strong>em linha ou coluna</strong> com facilidade.</p>
+    <pre><code>.container {
+  display: flex;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 Direção Principal (<code>flex-direction</code>)</h2>
+    <table>
+      <tr><th>Valor</th><th>Descrição</th></tr>
+      <tr><td><code>row</code></td><td>Itens em linha (padrão)</td></tr>
+      <tr><td><code>row-reverse</code></td><td>Linha invertida</td></tr>
+      <tr><td><code>column</code></td><td>Itens em coluna</td></tr>
+      <tr><td><code>column-reverse</code></td><td>Coluna invertida</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 Alinhamento Principal (<code>justify-content</code>)</h2>
+    <table>
+      <tr><th>Valor</th><th>Alinhamento na direção principal</th></tr>
+      <tr><td><code>flex-start</code></td><td>Início do container</td></tr>
+      <tr><td><code>center</code></td><td>Centralizado</td></tr>
+      <tr><td><code>flex-end</code></td><td>Final do container</td></tr>
+      <tr><td><code>space-between</code></td><td>Espaço entre os itens</td></tr>
+      <tr><td><code>space-around</code></td><td>Espaços iguais em volta</td></tr>
+      <tr><td><code>space-evenly</code></td><td>Espaços totalmente iguais</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 Alinhamento Cruzado (<code>align-items</code>)</h2>
+    <table>
+      <tr><th>Valor</th><th>Alinhamento na direção perpendicular</th></tr>
+      <tr><td><code>stretch</code></td><td>Preenche altura total (padrão)</td></tr>
+      <tr><td><code>flex-start</code></td><td>Início da cruz</td></tr>
+      <tr><td><code>center</code></td><td>Centralizado</td></tr>
+      <tr><td><code>flex-end</code></td><td>Final da cruz</td></tr>
+      <tr><td><code>baseline</code></td><td>Alinha pela linha de base do texto</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 Quebra de Linha (<code>flex-wrap</code>)</h2>
+    <p>Por padrão, o Flexbox <strong>não quebra linha</strong>. Use:</p>
+    <pre><code>.container {
+  flex-wrap: wrap;
+}</code></pre>
+    <p>Outros valores: <code>nowrap</code> (padrão), <code>wrap-reverse</code></p>
+  </section>
+
+  <section>
+    <h2>🔹 Atalhos úteis</h2>
+    <p><strong><code>gap</code></strong>: controla espaçamento entre itens</p>
+    <pre><code>.container {
+  display: flex;
+  gap: 1rem;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 Propriedades nos Itens (Filhos)</h2>
+    <table>
+      <tr><th>Propriedade</th><th>Função</th></tr>
+      <tr><td><code>order</code></td><td>Define a ordem de exibição (ex: <code>order: 2</code>)</td></tr>
+      <tr><td><code>flex-grow</code></td><td>Quanto o item cresce proporcionalmente</td></tr>
+      <tr><td><code>flex-shrink</code></td><td>Quanto o item encolhe se necessário</td></tr>
+      <tr><td><code>flex-basis</code></td><td>Tamanho base do item</td></tr>
+      <tr><td><code>align-self</code></td><td>Sobrescreve o <code>align-items</code> para um item só</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>📊 Exemplo Prático</h2>
+    <pre><code>.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>🧠 Dicas Rápidas</h2>
+    <ul>
+      <li>Flexbox é ótimo para <strong>menu horizontal</strong>, <strong>alinhamento central</strong>, <strong>distribuição de colunas</strong>.</li>
+      <li>Use <code>align-items: center</code> e <code>justify-content: center</code> para centralização total.</li>
+      <li>Para colunas responsivas, combine Flexbox com <code>wrap</code> + <code>width%</code>.</li>
+    </ul>
+  </section>
+
+</body>
+</html>

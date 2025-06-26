@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folha de Estudos - Media Queries</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    code {
+      background: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eaeaea;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 Folha de Estudos – Media Queries (Responsividade)</h1>
+
+  <section>
+    <h2>🔹 O que são Media Queries?</h2>
+    <p><strong>Media Queries</strong> são regras CSS que aplicam estilos diferentes com base nas características da tela: largura, altura, orientação, resolução etc.</p>
+    <p>Elas tornam seu layout <strong>responsivo</strong>, ou seja, adaptável a celulares, tablets e monitores.</p>
+  </section>
+
+  <section>
+    <h2>🔹 Sintaxe Básica</h2>
+    <pre><code>@media (condição) {
+  /* estilos aqui */
+}</code></pre>
+    <p>Exemplo:</p>
+    <pre><code>@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}</code></pre>
+    <p>👉 Aplica o fundo azul claro quando a tela tiver 600px ou menos.</p>
+  </section>
+
+  <section>
+    <h2>🔹 Tipos Comuns de Condições</h2>
+    <table>
+      <tr><th>Condição</th><th>Descrição</th><th>Exemplo</th></tr>
+      <tr>
+        <td><code>max-width</code></td>
+        <td>Aplica quando a tela tem até X pixels</td>
+        <td><code>@media (max-width: 768px)</code></td>
+      </tr>
+      <tr>
+        <td><code>min-width</code></td>
+        <td>Aplica a partir de X pixels</td>
+        <td><code>@media (min-width: 1024px)</code></td>
+      </tr>
+      <tr>
+        <td><code>orientation</code></td>
+        <td>Verifica orientação: retrato ou paisagem</td>
+        <td><code>@media (orientation: portrait)</code></td>
+      </tr>
+      <tr>
+        <td><code>hover</code>, <code>pointer</code></td>
+        <td>Verifica se o dispositivo tem ponteiro (mouse, touch, etc)</td>
+        <td><code>@media (hover: hover)</code></td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 Breakpoints Comuns</h2>
+    <p>Breakpoints são larguras de tela onde o layout muda:</p>
+    <table>
+      <tr><th>Dispositivo</th><th>Breakpoint</th></tr>
+      <tr><td>Celular pequeno</td><td><code>max-width: 480px</code></td></tr>
+      <tr><td>Celular médio</td><td><code>max-width: 768px</code></td></tr>
+      <tr><td>Tablet</td><td><code>max-width: 1024px</code></td></tr>
+      <tr><td>Notebook/Desktop</td><td><code>min-width: 1025px</code></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>📊 Quando Usar Media Queries</h2>
+    <ul>
+      <li>Para ajustar tamanhos de fonte, margens e paddings em telas pequenas.</li>
+      <li>Para reorganizar colunas em layouts (ex: 3 colunas viram 1 no celular).</li>
+      <li>Para mostrar ou esconder elementos em certos tamanhos de tela.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🧠 Dicas Rápidas</h2>
+    <ul>
+      <li>Escreva o layout base primeiro (mobile-first), depois adicione <code>min-width</code>.</li>
+      <li>Use unidades relativas (<code>em</code>, <code>rem</code>, <code>%</code>) dentro das media queries para melhor responsividade.</li>
+      <li>Evite ter muitas media queries pequenas. Agrupe estilos quando possível.</li>
+    </ul>
+  </section>
+
+</body>
+</html>
