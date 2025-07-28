@@ -24,6 +24,6 @@
 
 .caixa3 {
     background-color: lightgray;
-    grid-area: 2 / 3 / 4 / 5;
+    grid-area: 2 / 3 / span 2 / span 2;
 
 }
